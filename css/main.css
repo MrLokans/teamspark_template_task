@@ -1,0 +1,40 @@
+body {
+    background-color: #e6e6e6;
+}
+
+.news-row{
+    margin-top: 20px;
+}
+
+.news-miniature {
+    border: 1px solid #f9f9f9;
+    background-color: #f8f8f8;
+    padding: 10px;
+}   
+
+.news-miniature:hover {
+    border: 1px solid #e1e1e1;
+}
+
+.news-miniature-pic{
+    max-height: 200px;
+    /*margin: 0 auto;*/
+}
+
+.invitation-block {
+    margin-top: 50px;
+}
+
+.miniature-social-buttons > a {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.news-miniature-pic {
+
+}
+
+.news-miniature-pic:hover {
+    opacity: 0;
+    transition: top 1s ease-out 0.5s;
+};
