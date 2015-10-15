@@ -1,5 +1,6 @@
 body {
     /*background-color: #F5F8FA;*/
+    background-color: #f5f8fa !important;
 
 }
 
@@ -14,26 +15,24 @@ body {
 }
 
 .separate-block-wrapper {
+    background-color: #ffffff;
     padding: 10px;
-    border-radius: 3px;
-    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+    border: 1px solid rgb(211, 224, 233);
 }
 
 .separate-block-header {
-    border: 1px solid yellow;
 }
 
 .main-block {
     margin-top: 50px;
-    border: 1px solid blue;
 }
 
 .left-menu {
-    /*margin: 0px 20px;*/
 }
 
 .content-block {
-    /*margin: 0px 20px;*/
 }
 
 .right-menu {
@@ -49,11 +48,11 @@ body {
 }
 
 .post-message {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .post-header {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 }
 
 .post-text {
