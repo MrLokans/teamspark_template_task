@@ -19,6 +19,10 @@ body {
     border: 1px solid black;
 }
 
+.separate-block-header {
+    border: 1px solid yellow;
+}
+
 .main-block {
     margin-top: 50px;
     border: 1px solid blue;
