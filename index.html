@@ -7,7 +7,7 @@
     <title>Template Project</title>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container"> -->
 
 
 
@@ -115,18 +115,16 @@
         <div class="col-md-6 content-block separate-block">
 
             <div class="container-fluid separate-block-wrapper">
-                <div class="row new-post-area">
 
-                    <form action="/post_message"class="form-inline message-post-form">
-                        <div class="form-group">
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" placeholder="Message">
-                            </div>
-                            <div class="col-md-2"><button>Photo</button></div>
-                            
+                <div class="row message-input-block">
+                    <div class="col-lg-12">
+                        <div class="input-group input-group">
+                            <input type="text" class="form-control input" id="search-church" placeholder="Message">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn" type="submit"><span class="glyphicon glyphicon-repeat"></span></button>
+                            </span>
                         </div>
-                    </form>
-
+                    </div>
                 </div>
 
                 <div class="row message-block">
@@ -138,8 +136,10 @@
 
                     <div class="col-md-10 col-xs-10 post-message">
                         <div class="row post-header">
-                            <div class="pull-left post-author"><strong>Dave Gamache</strong></div>
-                            <small class="pull-right post-time text-muted">4 min</small>
+                            <div class="col-md-12">
+                                <div class="pull-left post-author"><strong>Dave Gamache</strong></div>
+                                <small class="pull-right post-time text-muted">4 min</small>
+                            </div>
                         </div>
                         
                         
@@ -149,13 +149,28 @@
                             </div>
                         </div>
                         <div class="row post-photos">
+                            <div class="col-md-7 col-xs-12">
+                                <img src="img/unsplash_1.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="col-md-5 col-xs-6">
+                                <img src="img/instagram_1.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>    
+                        <div class="row post-photos">
+                            <div class="col-md-5 col-xs-6">
+                                <img src="img/instagram_13.jpg" alt="" class="img-responsive">
+                            </div>
+
+                            <div class="col-md-7 col-xs-12">
+                                <img src="img/unsplash_2.jpg" alt="" class="img-responsive">
+                            </div>
                             
                         </div>
 
                         <div class="row comments">
                             <div class="col-md-12 single-comment-block">
                                 <div class="row">
-                                    <div class="col-md-1 comment-avatar">
+                                    <div class="col-md-1 comment-avatar hidden-xs">
                                         <img src="img/avatar-fat.jpg" alt="user_avatar" class="img-circle comment-avatar-img">
                                     </div>
                                     <div class="col-md-11 comment-text">
@@ -166,7 +181,7 @@
 
                             <div class="col-md-12 single-comment-block">
                                 <div class="row">
-                                    <div class="col-md-1 comment-avatar">
+                                    <div class="col-md-1 comment-avatar hidden-xs">
                                         <img src="img/avatar-mdo.png" alt="user_avatar" class="img-circle comment-avatar-img">
                                     </div>
                                     <div class="col-md-11 comment-text">
@@ -189,8 +204,10 @@
 
                     <div class="col-md-10 col-xs-10 post-message">
                         <div class="row post-header">
-                            <div class="pull-left post-author"><strong>Jacob Thornton</strong></div>
-                            <small class="pull-right post-time text-muted">12 min</small>
+                            <div class="col-md-12">
+                                <div class="pull-left post-author"><strong>Jacob Thornton</strong></div>
+                                <small class="pull-right post-time text-muted">12 min</small>
+                            </div>
                         </div>
                         
                         
@@ -202,6 +219,9 @@
                     </div>
                 </div>
 
+
+
+
                 <div class="row message-block">
                     <div class="col-md-2 col-xs-2 avatar-block">
                         <div class="avatar-img-block">
@@ -211,8 +231,10 @@
 
                     <div class="col-md-10 col-xs-10 post-message">
                         <div class="row post-header">
-                            <div class="pull-left post-author"><strong>Mark Otto</strong></div>
-                            <small class="pull-right post-time text-muted">40 min</small>
+                            <div class="col-md-12">
+                                <div class="pull-left post-author"><strong>Mark Otto</strong></div>
+                                <small class="pull-right post-time text-muted">34 min</small>
+                            </div>
                         </div>
                         
                         
@@ -221,8 +243,14 @@
 Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                             </div>
                         </div>
+                        <div class="row post-photos">
+                            <div class="col-md-12">
+                                <img src="img/instagram_3.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
                     </div>
                 </div>
+
 
 
             </div>
