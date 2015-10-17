@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-lightbox.min.css">
     <title>Template Project</title>
 </head>
 <body>
@@ -129,9 +130,9 @@
 
                 <div class="row message-block">
                     <div class="col-md-2 col-xs-2 avatar-block">
-                        <div class="avatar-img-block">
+                        <a href="#" class="avatar-img-block">
                             <img src="img/avatar-dhg.png" class="img-circle avatar-img" alt="">
-                        </div>
+                        </a>
                     </div>
 
                     <div class="col-md-10 col-xs-10 post-message">
@@ -149,30 +150,56 @@
                             </div>
                         </div>
                         <div class="row post-photos">
-                            <a href="#" class="col-md-7 col-xs-12" data-toggle="lightbox">
+                            <a href="#" class="col-md-7 col-xs-12" data-toggle="modal" data-target="#photo-modal-1">
                                 <img src="img/unsplash_1.jpg" alt="" class="img-responsive">
                             </a>
-                            <a href="#" class="col-md-5 col-xs-6">
+
+                            <div class="modal fade" id="photo-modal-1">
+                                <div class="modal-dialog" role="document">
+                                    <img class="img-responsive" src="img/unsplash_1.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="#" class="col-md-5 col-xs-6" data-toggle="modal" data-target="#photo-modal-2">
                                 <img src="img/instagram_1.jpg" alt="" class="img-responsive">
                             </a>
-                        </div>    
-                        <div class="row post-photos">
-                            <a href="#" class="col-md-5 col-xs-6">
+
+                            <div class="modal fade" id="photo-modal-2">
+                                <div class="modal-dialog" role="document">
+                                    <img class="img-responsive" src="img/instagram_1.jpg" alt="">
+                                </div>
+                            </div>
+
+                        <!-- </div>     -->
+                        <!-- <div class="row post-photos"> -->
+                            <a href="#" class="col-md-5 col-xs-6" data-toggle="modal" data-target="#photo-modal-3">
                                 <img src="img/instagram_13.jpg" alt="" class="img-responsive">
                             </a>
 
-                            <a href="#" class="col-md-7 col-xs-12">
+                            <div class="modal fade" id="photo-modal-3">
+                                <div class="modal-dialog" role="document">
+                                    <img class="img-responsive" src="img/instagram_13.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="#" class="col-md-7 col-xs-12" data-toggle="modal" data-target="#photo-modal-4">
                                 <img src="img/unsplash_2.jpg" alt="" class="img-responsive">
                             </a>
+
+                            <div class="modal fade" id="photo-modal-4">
+                                <div class="modal-dialog" role="document">
+                                    <img class="img-responsive" src="img/unsplash_2.jpg" alt="">
+                                </div>
+                            </div>
                             
                         </div>
 
                         <div class="row comments">
                             <div class="col-md-12 single-comment-block">
                                 <div class="row">
-                                    <div class="col-md-1 comment-avatar hidden-xs">
+                                    <a href="#" class="col-md-1 comment-avatar hidden-xs">
                                         <img src="img/avatar-fat.jpg" alt="user_avatar" class="img-circle comment-avatar-img">
-                                    </div>
+                                    </a>
                                     <div class="col-md-11 comment-text">
                                         <strong>Jacon Thornton:</strong>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
                                     </div>
@@ -181,9 +208,9 @@
 
                             <div class="col-md-12 single-comment-block">
                                 <div class="row">
-                                    <div class="col-md-1 comment-avatar hidden-xs">
+                                    <a href="#" class="col-md-1 comment-avatar hidden-xs">
                                         <img src="img/avatar-mdo.png" alt="user_avatar" class="img-circle comment-avatar-img">
-                                    </div>
+                                    </a>
                                     <div class="col-md-11 comment-text">
                                         <strong>Mark Otto:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
                                     </div>
@@ -197,9 +224,9 @@
 
                 <div class="row message-block">
                     <div class="col-md-2 col-xs-2 avatar-block">
-                        <div class="avatar-img-block">
+                        <a href="#" class="avatar-img-block">
                             <img src="img/avatar-fat.jpg" class="img-circle avatar-img" alt="">
-                        </div>
+                        </a>
                     </div>
 
                     <div class="col-md-10 col-xs-10 post-message">
@@ -224,9 +251,9 @@
 
                 <div class="row message-block">
                     <div class="col-md-2 col-xs-2 avatar-block">
-                        <div class="avatar-img-block">
+                        <a href="#" class="avatar-img-block">
                             <img src="img/avatar-mdo.png" class="img-circle avatar-img" alt="">
-                        </div>
+                        </a>
                     </div>
 
                     <div class="col-md-10 col-xs-10 post-message">
@@ -244,8 +271,14 @@ Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta f
                             </div>
                         </div>
                         <div class="row post-photos">
-                            <div class="col-md-12">
+                            <a href="#" class="col-md-12" data-toggle="modal" data-target="#photo-modal-5">
                                 <img src="img/instagram_3.jpg" alt="" class="img-responsive">
+                            </a>
+                        </div>
+
+                       <div class="modal fade" id="photo-modal-5">
+                            <div class="modal-dialog" role="document">
+                                <img class="img-responsive" src="img/instagram_3.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -308,5 +341,7 @@ Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta f
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-lightbox.min.js"></script>
+</body>
 </body>
 </html>
