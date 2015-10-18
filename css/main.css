@@ -1,12 +1,11 @@
-body {
-    /*background-color: #F5F8FA;*/
-    background-color: #f5f8fa !important;
-
-}
-
 * {
-    /*border: 1px solid green;*/
 }
+
+body {
+    background-color: #f5f8fa !important;
+}
+
+
 
 .separate-block {
     padding-top: 15px;
@@ -48,17 +47,29 @@ body {
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
+.avatar-img-block{
+    padding: 10px;
+}
 
-.message-post-form{
-    padding: 10px 20px;
+.post-avatar-img {
+    width: 60px;
+}
+
+.message-input-block{
+    padding: 12px 10px 15px 10px;
+}
+
+.message-block{
+    border-top: 1px solid rgb(211, 224, 233);
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .post-message {
-    /*border: 1px solid red;*/
 }
 
 .post-header {
-    /*border: 1px solid green;*/
+    padding-right: 14px;
 }
 
 .post-text {
@@ -96,4 +107,31 @@ body {
 .photos_bl_sec {
     width: 105px;
     height: 101px;
+}
+.post-photos {
+    margin-bottom: 20px;
+}
+
+.post-photos > div {
+    /*padding: 0px 5px;*/
+}
+
+.post-photos>div>img {
+    /*margin-top: 8px;*/
+}
+
+.comment-avatar-img {
+    width: 38px;
+}
+
+.comment-text {
+    padding-left: 20px !important;
+}
+
+.comment-text > strong {
+    padding-right: 5px;
+}
+
+.single-comment-block {
+    margin-top: 15px;
 }
