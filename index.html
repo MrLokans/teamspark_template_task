@@ -4,236 +4,314 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-lightbox.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+
     <title>Template Project</title>
 </head>
 <body>
+	
+    <nav class="navbar kk navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="img/brand-white.png">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Docs</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Docs</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
     </nav>
 
     <div class="container">
 
-    <div class="row main-block">
-        <div class="col-md-3 left-menu">
-            <div class="row info-block separate-block">
-                <div class="separate-block-wrapper">
-                    <div class="background"></div>
-                    <div class="all-info">
-                        <h2>Dave Gamache</h2>
-                        <span class="status"> wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</span>
-                        <div class="row relationships-block">
-                            <div class="col-md-6">
-                                <div>Friends</div>
-                                <div>12M</div>
+        <div class="row main-block">
+            <div class="col-md-3 left-menu">
+                <div class="row info-block separate-block">
+                    <div class="separate-block-wrapper">
+                        <div class="background"></div>
+                        <div class="all-info">
+                            <h2>Dave Gamache</h2>
+                            <span class="status"> wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</span>
+
+                            <div class="row relationships-block">
+                                <div class="col-md-6">
+                                    <div>Friends</div>
+                                    <div>12M</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">Enemies</div>
+                                    <div class="row">1</div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="row">Enemies</div>
-                                <div class="row">1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row about-block separate-block">
-                <div class="separate-block-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 separate-block-header">
-                            <h4>About <small><a href="#">Edit</a></small></h4>
                         </div>
                     </div>
                 </div>
 
-            </div>
 
-            <div class="row photos-block separate-block">
-                <div class="separate-block-wrapper">
-                    <div class="row photo-block-title">
-                        <div class="col-md-12 separate-block-header">
-                            <h4>Photos <small><a href="#">Edit</a></small></h4>
-                        </div>
-                    </div>
-
-                    <div class="row photo-row">
-                        <div class="col-md-6">Photo1</div>
-                        <div class="col-md-6">Photo2</div>
-                    </div>
-
-
-                    <div class="row photo-row">
-                        <div class="col-md-6">Photo1</div>
-                        <div class="col-md-6">Photo2</div>
-                    </div>
-
-
-                    <div class="row photo-row">
-                        <div class="col-md-6">Photo1</div>
-                        <div class="col-md-6">Photo2</div>
-                    </div>
-
-
-                    <div class="row photo-row">
-                        <div class="col-md-6">Photo1</div>
-                        <div class="col-md-6">Photo2</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 content-block separate-block">
-
-            <div class="separate-block-wrapper">
-                <div class="row new-post-area">
-
-                    <form action="/post_message"class="form-inline message-post-form">
-                        <div class="form-group">
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" placeholder="Message">
-                            </div>
-                            <div class="col-md-2"><button>Photo</button></div>
-                            
-                        </div>
-                    </form>
-
-                </div>
-
-                <div class="row message-block">
-                    <div class="col-md-2 avatar-block">
-                        <div class="avatar-img-block">
-                            <!-- <img src="img/avatar-dhg.png" class="avatar-img" alt=""> -->
-                            aaaa
-                        </div>
-                    </div>
-
-                    <div class="col-md-10 post-message">
-                        <div class="row post-header">
-                            <div class="pull-left post-author">Dave Gamache</div>
-                            <div class="pull-right post-time">4 min</div>
-                        </div>
-                        
-                        
+                <div class="row about-block separate-block">
+                    <div class="separate-block-wrapper">
                         <div class="row">
-                            <div class="col-md-12 post-text">
-                                Aenean auctor posuere justo id fringilla. Nam accumsan aliquam odio, ut iaculis neque condimentum eu. 
-                                Proin venenatis, elit nec finibus fringilla, lorem neque interdum mauris, eu porttitor ligula nunc id tortor. Nam maximus a ipsum at convallis. Curabitur vestibulum ut arcu a maximus. Mauris tortor purus, bibendum vitae molestie sed, finibus eget tellus. Aliquam lacinia ullamcorper tempor. Donec orci risus, posuere at odio ac, hendrerit pretium diam. Proin placerat, quam in consequat faucibus, quam purus convallis leo, eu venenatis lorem lorem vel ante. Vestibulum fringilla vitae purus in pretium. Quisque interdum pretium ante faucibus feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam venenatis, velit id sodales sodales, erat turpis egestas nisl, ac posuere nisl leo vel nunc. Donec faucibus viverra turpis, quis euismod lectus molestie vitae. Cras ut justo nisi.
-                            </div>
-                        </div>
-                        <div class="row post-photos">
-                            
-                        </div>
-
-                        <div class="row comments">
-                            <div class="col-md-12 single-comment-block">
-                                <div class="row">
-                                    <div class="col-md-2 comment-avatar">
-                                        ava
-                                    </div>
-                                    <div class="col-md-10 comment-text">
-                                        <strong>Dave Gamache:</strong>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 single-comment-block">
-                                <div class="row">
-                                    <div class="col-md-2 comment-avatar">
-                                        ava
-                                    </div>
-                                    <div class="col-md-10 comment-text">
-                                        <strong>Dave Gamache:</strong>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-            
-        <div class="col-md-3 right-menu">
-            <div class="sponsored-block separate-block">
-                <div class="separate-block-wrapper">
-                    <div>sadsadsa</div>
-                    <h4>It might be time to visit Iceland.</h4>
-                    <p>Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for?</p>
-                    <button>Buy a ticket</button>
-                </div>
-                
-            </div>
-
-            <div class="about-block separate-block">
-                <div class="separate-block-wrapper">
-                    <div class="row separate-block-header">
                         <div class="col-md-12 separate-block-header">
-                            <h4>Photos <small><a href="#">Edit</a></small></h4>
-                        </div>
-                    </div>
-                    <div class="row person-liked">
-                        <div class="col-md-4 liked-avatar"></div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <strong>Jacob Thornton</strong> @fat
+                        <div class="col-md-1"><h3>About</h3></div>
+                        <div class="col-md-1"><a ref="#">Edit</a></div>
+                        
                             </div>
-                            <div class="row"><button>Follow</button></div>
-                        </div>
-                    </div>
-                    <div class="row person-liked">
-                        <div class="col-md-4 liked-avatar"></div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <strong>Jacob Thornton</strong> @fat
-                            </div>
-                            <div class="row"><button>Follow</button></div>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="row photos-block separate-block">
+                    <div class="separate-block-wrapper">
+                        <div class="row photo-block-title">
+                        <div class="col-md-12 separate-block-header">
+                        <div class="col-md-2"><h4>Photos</h4></div>
+                                <h4>Photos
+                        <div class="col-md-2"><a href="">Edit</a></div>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="row photo-row">
+                            <div class="col-md-6">Photo1</div>
+                            <div class="col-md-6">Photo2</div>
+                        </div>
+
+
+                        <div class="row photo-row">
+                            <div class="col-md-6">Photo1</div>
+                            <div class="col-md-6">Photo2</div>
+                        </div>
+
+
+                        <div class="row photo-row">
+                            <div class="col-md-6">Photo1</div>
+                            <div class="col-md-6">Photo2</div>
+                        </div>
+
+
+                        <div class="row photo-row">
+                            <div class="col-md-6">Photo1</div>
+                            <div class="col-md-6">Photo2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 content-block separate-block">
+
+                <div class="separate-block-wrapper">
+                    <div class="row new-post-area">
+
+                        <form action="/post_message" class="form-inline message-post-form">
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" placeholder="Message">
+                                </div>
+                                <div class="col-md-2">
+                                    <button>Photo</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="row message-block">
+                        <div class="col-md-2 avatar-block">
+                            <div class="avatar-img-block">
+                                <!-- <img src="img/avatar-dhg.png" class="avatar-img" alt=""> -->
+                                aaaa
+                            </div>
+                        </div>
+
+                        <div class="col-md-10 post-message">
+                            <div class="row post-header">
+                                <div class="pull-left post-author">Dave Gamache</div>
+                                <div class="pull-right post-time">4 min</div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-12 post-text">
+                                    Aenean auctor posuere justo id fringilla. Nam accumsan aliquam odio, ut iaculis
+                                    neque condimentum eu.
+                                    Proin venenatis, elit nec finibus fringilla, lorem neque interdum mauris, eu
+                                    porttitor ligula nunc id tortor. Nam maximus a ipsum at convallis. Curabitur
+                                    vestibulum ut arcu a maximus. Mauris tortor purus, bibendum vitae molestie sed,
+                                    finibus eget tellus. Aliquam lacinia ullamcorper tempor. Donec orci risus, posuere
+                                    at odio ac, hendrerit pretium diam. Proin placerat, quam in consequat faucibus, quam
+                                    purus convallis leo, eu venenatis lorem lorem vel ante. Vestibulum fringilla vitae
+                                    purus in pretium. Quisque interdum pretium ante faucibus feugiat. Interdum et
+                                    malesuada fames ac ante ipsum primis in faucibus. Etiam venenatis, velit id sodales
+                                    sodales, erat turpis egestas nisl, ac posuere nisl leo vel nunc. Donec faucibus
+                                    viverra turpis, quis euismod lectus molestie vitae. Cras ut justo nisi.
+                                </div>
+                            </div>
+                            <div class="row post-photos">
+
+                            </div>
+
+                            <div class="row comments">
+                                <div class="col-md-12 single-comment-block">
+                                    <div class="row">
+                                        <div class="col-md-2 comment-avatar">
+                                            ava
+                                        </div>
+                                        <div class="col-md-10 comment-text">
+                                            <strong>Dave Gamache:</strong>Donec id elit non mi porta gravida at eget
+                                            metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                            auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo
+                                            cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur
+                                            est at lobortis.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 single-comment-block">
+                                    <div class="row">
+                                        <div class="col-md-2 comment-avatar">
+                                            ava
+                                        </div>
+                                        <div class="col-md-10 comment-text">
+                                            <strong>Dave Gamache:</strong>Donec id elit non mi porta gravida at eget
+                                            metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                            auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo
+                                            cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur
+                                            est at lobortis.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 right-menu">
+
+                <div class="notification separate-block">
+                    <div class="alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+
+                        <a class="nl" href="#">Visit your profile!</a>
+                        Check your self, you aren't looking too good.
+                    </div>
+                </div>
+
+                <div class="sponsored-block separate-block">
+                    <div class="separate-block-wrapper">
+                        <div class="sponsored-content">
+                            <h5 class="st">Sponsored</h5>
+                            <img class="sponsored-img img-responsive" src="img/instagram_2.jpg" alt="instagram"/>
+
+                            <p><strong class="sponsored-title">It might be time to visit Iceland. </strong>Iceland is so
+                                chill, and everything looks cool here. Also, we heard the people are pretty
+                                nice. What are you waiting for?</p>
+                            <button type="button" class="btn btn-default btn-sm">
+                                <div class="light-text">Buy a ticket</div>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="likes-block separate-block">
+                    <div class="likes-wrapper">
+                        <div class="sponsored-content">
+
+                            <div class="row separate-block-header">
+                                <div class="col-md-12 separate-block-header">
+                                    <h5 class="st">Likes ·
+                                        <small><a href="#">View All</a></small>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <div class="row person-liked">
+                                <div class="col-md-4 liked-avatar">
+                                    <img class="img-responsive img-circle" src="img/avatar-fat.jpg" alt=""/>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <strong class="sponsored-title">Jacob Thornton</strong> @fat
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" class="follow light-text btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Follow
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row person-liked">
+                                <div class="col-md-4 liked-avatar">
+                                    <img class="img-responsive img-circle" src="img/avatar-mdo.png" alt=""/>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <strong class="sponsored-title">Mark Otto</strong> @mdo
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" class="follow light-text btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Follow
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="qz">Dave really likes this nerds, no one knows why though.</div>
+
+                </div>
+
+                <div class="about-block separate-block">
+                    <div class="separate-block-wrapper">
+                        <div class="sponsored-content sponsored-block">
+                            © 2015 Bootstrap <a class="ah" href="#">About</a> <a class="ah" href="#">Help</a>
+                            <a class="ah" href="#">Terms</a> <a class="ah" href="#">Privacy</a> <a class="ah" href="#">Cookies</a> <a class="ah" href="#">Ads</a> <a class="ah" href="#">info</a>
+                            <a class="ah" href="#">Brand</a> <a class="ah" href="#">Blog</a> <a class="ah" href="#">Status</a> <a class="ah" href="#">Apps</a> <a class="ah" href="#">Jobs</a>
+                            <a class="ah" href="#">Advertise</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
 
         </div>
-
-
-
     </div>
+</div>
+<!-- /container -->
 
-    </div> <!-- /container -->
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-lightbox.min.js"></script>
 </body>
 </html>
