@@ -1,7 +1,10 @@
-body {
-    /*background-color: #F5F8FA;*/
-    background-color: #f5f8fa !important;
 
+body {
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1e3948;
+    background-color: #f5f8fa !important;
 }
 
 * {
@@ -10,8 +13,10 @@ body {
 
 .separate-block {
     padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .separate-block-wrapper {
@@ -20,6 +25,83 @@ body {
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
     border: 1px solid rgb(211, 224, 233);
+}
+
+.likes-wrapper {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+    border: 1px solid rgb(211, 224, 233);
+}
+
+a.nl:link {font-weight: 500; color:#66512c;}
+a.nl:active {font-weight: 500; color:#66512c;}
+a.nl:visited {font-weight: 500;color:#66512c;}
+a.nl:hover {font-weight: 500; color:#66512c;}
+
+.alert-warning {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 15px 15px;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: #8a6d3b;
+}
+
+.notification > .alert-warning {
+    border: 1px solid #e6d0a1;
+}
+
+.sponsored-block {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #1e3948;
+}
+
+.likes-block {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #1e3948;
+}
+
+.person-liked {
+    margin-bottom: 15px;
+}
+
+.follow {
+    margin: 3px 0px;
+}
+
+.qz {
+    padding: 10px 15px;
+    background-color: #f5f8fa;
+    border: 1px solid #d3e0e9;
+    border-top: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.sponsored-title {
+    font-weight: 500;
+}
+
+.sponsored-content {
+    margin: 0px 7px;
+}
+
+.sponsored-img {
+    padding-bottom: 10px;
+}
+
+.st {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.light-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .separate-block-header {
@@ -57,4 +139,8 @@ body {
 
 .post-text {
     padding: 10px;
+}
+
+.ah {
+    margin-left: 6px;
 }
