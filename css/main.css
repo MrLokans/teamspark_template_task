@@ -11,6 +11,42 @@ body {
 * {
 }
 
+@media (min-width: 1260px){
+.container {
+    width: 1230px !important;
+}
+
+.navbar-custom {
+    background-color:#229922;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+
+
+.navbar-avatar-btn{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border: 0px;
+    padding: 0px;
+    background: transparent;
+    outline: none !important;
+}
+
+.navbar-avatar-img {
+    width: 38px;
+}
+
 .separate-block {
     padding-top: 15px;
     padding-left: 5px;
