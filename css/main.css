@@ -48,8 +48,8 @@ body {
 }
 
 .separate-block {
-    padding-top: 15px;
-    padding-left: 5px;
+    /*padding-top: 15px;*/
+    /*padding-left: 5px;*/
     padding-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -159,7 +159,8 @@ a.nl:hover {font-weight: 500; color:#66512c;}
 }
 
 .avatar-img-block{
-    padding: 10px;
+    /*padding: 10px;*/
+    /*padding-left: 20px;*/
 }
 
 .avatar-img {
