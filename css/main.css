@@ -73,7 +73,7 @@ a.nl:hover {font-weight: 500; color:#66512c;}
     margin: 3px 0px;
 }
 
-.qz {
+.likes-block-footer {
     padding: 10px 15px;
     background-color: #f5f8fa;
     border: 1px solid #d3e0e9;
@@ -94,7 +94,8 @@ a.nl:hover {font-weight: 500; color:#66512c;}
     padding-bottom: 10px;
 }
 
-.st {
+/* THIS STYLE IS DUBLICATED, REFACTOR */
+.separate-block-header-2 {
     font-weight: 500;
     font-size: 14px;
 }
@@ -141,6 +142,6 @@ a.nl:hover {font-weight: 500; color:#66512c;}
     padding: 10px;
 }
 
-.ah {
+.sponsored-block-href {
     margin-left: 6px;
 }
