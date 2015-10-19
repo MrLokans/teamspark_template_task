@@ -11,10 +11,10 @@ body {
 * {
 }
 
-@media (min-width: 1260px){
+/*@media (min-width: 1260px){
 .container {
     width: 1230px !important;
-}
+}*/
 
 .navbar-custom {
     background-color:#229922;
@@ -48,8 +48,8 @@ body {
 }
 
 .separate-block {
-    /*padding-top: 15px;*/
-    /*padding-left: 5px;*/
+    padding-top: 15px;
+    padding-left: 5px;
     padding-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
