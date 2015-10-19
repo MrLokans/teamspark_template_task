@@ -89,6 +89,10 @@ a.nl:hover {font-weight: 500; color:#66512c;}
     border: 1px solid #e6d0a1;
 }
 
+.photo-row {
+    /*margin-bottom: 8px;*/
+}
+
 .sponsored-block {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -224,15 +228,6 @@ a.nl:hover {font-weight: 500; color:#66512c;}
     margin-bottom: 7px;
 }
 
-.photos_bl {
-    width: 105px;
-    height: 101px;
-}
-
-.photos_bl_sec {
-    width: 105px;
-    height: 101px;
-}
 /* styles for the left menu */
 
 .post-photos {
