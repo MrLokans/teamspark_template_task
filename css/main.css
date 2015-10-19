@@ -16,30 +16,27 @@ body {
     width: 1230px !important;
 }*/
 
+.navbar-custom a:hover{
+    background-color: transparent !important;
+    color: #eeeeee !important;
+}
+
 .navbar-custom {
-    background-color:#229922;
-    color:#ffffff;
+    background-color:#3097d1;
+    border-color: #1c73a5;
     border-radius:0;
 }
 
 .navbar-custom .navbar-nav > li > a {
     color:#fff;
 }
-.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color:transparent;
-}
-.navbar-custom .navbar-brand {
-    color:#eeeeee;
-}
-
 
 .navbar-avatar-btn{
     margin-top: 7px;
     margin-bottom: 7px;
     border: 0px;
     padding: 0px;
-    background: transparent;
+    /*background: transparent;*/
     outline: none !important;
 }
 
