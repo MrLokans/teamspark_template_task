@@ -24,6 +24,21 @@ $(document).ready(function(){
     });
 
 
+    buyTicket = $('#buy-ticket-button');
+    buyTicket.on("click", function(){
+        $('#buy-ticket-button').replaceWith($('<input id="ticket-nuber-input" placeholder="Enter ticket num"></input>'));
+    });
+
+    tickNumInput = $('#ticket-nuber-input');
+    tickNumInput.on("keydown", function(e) {
+            if(e.which == 13) {
+
+                $('#ticket-nuber-input').replaceWith($("<h4>You bought" + 12 + "</h4>"));    
+            } else{
+                console.log(e.which);
+            }
+    });
+
 });
 
 function isFollowing(follower_id){
@@ -47,6 +62,9 @@ function changeFollowStatus(buttonNum){
         $('#'+btn_id).text("Unfollow");
         localStorage.setItem(btn_id, "following");
     }
+
+
+
 
 }
 // function
