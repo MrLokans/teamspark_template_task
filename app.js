@@ -42,5 +42,5 @@ app.use(function(req, res, next) {
 // }
 
 
-
+console.log("Server is running on localhost:3000");
 app.listen(3000);
