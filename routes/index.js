@@ -1,7 +1,15 @@
 var express = require('express');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 var router = express.Router();
 
 //router.all('/')
+
+passport.use(new LocalStrategy(
+  function(username, password, done){
+    
+  })
+);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
