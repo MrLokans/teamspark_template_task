@@ -10,9 +10,13 @@ var routes = require('./routes/index');
 // var users = require('./routes/users');
 
 var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/twitter_clone');
+var mongoose = require('mongoose');
 
+require('./models/Users');
+require('./models/Posts');
+require('./models/Comments');
+
+mongoose.connect('mongodb://localhost/twitter_clone');
 // using twitter db;
 var app = express();
 
@@ -28,11 +32,6 @@ app.use(session({secret: 'SECRET'}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(function(req, res, next){
-    req.db = db;
-    next();
-});
 
 app.use('/', routes);
 
