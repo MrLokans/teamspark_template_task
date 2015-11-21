@@ -1,0 +1,47 @@
+extends layout
+block content
+  div.container
+    div.row.main-block
+      .row.message-block
+        .col-md-2.col-xs-2.avatar-block
+          a.avatar-img-block(href='#')
+            img.post-avatar-img.img-circle.img-responsive.center-block(src='/images/avatar-dhg.png', alt='')
+        .col-md-10.col-xs-10.post-message
+          .row.post-header
+            .col-md-12
+              .pull-left.post-author
+                strong= post.author
+              small.pull-right.post-time.text-muted= post.time
+          .row
+            .col-md-12.post-text= post.text
+          .row.post-photos
+            a.col-md-7.col-xs-12(href='#', data-toggle='modal', data-target='#photo-modal-1')
+              img.img-responsive(src='/images/unsplash_1.jpg', alt='')
+            #photo-modal-1.modal.fade
+              .modal-dialog(role='document')
+                img.img-responsive(src='/images/unsplash_1.jpg', alt='')
+            a.col-md-5.col-xs-6(href='#', data-toggle='modal', data-target='#photo-modal-2')
+              img.img-responsive(src='/images/instagram_1.jpg', alt='')
+            #photo-modal-2.modal.fade
+              .modal-dialog(role='document')
+                img.img-responsive(src='/images/instagram_1.jpg', alt='')
+            a.col-md-5.col-xs-6(href='#', data-toggle='modal', data-target='#photo-modal-3')
+              img.img-responsive(src='/images/instagram_13.jpg', alt='')
+            #photo-modal-3.modal.fade
+              .modal-dialog(role='document')
+                img.img-responsive(src='/images/instagram_13.jpg', alt='')
+            a.col-md-7.col-xs-12(href='#', data-toggle='modal', data-target='#photo-modal-4')
+              img.img-responsive(src='/images/unsplash_2.jpg', alt='')
+            #photo-modal-4.modal.fade
+              .modal-dialog(role='document')
+                img.img-responsive(src='/images/unsplash_2.jpg', alt='')
+          if post.comments
+            .row.comments
+              each comment in post.comments
+                .col-md-12.single-comment-block
+                  .row
+                    a.col-md-1.comment-avatar.hidden-xs(href='#')
+                      img.img-responsive.img-circle.comment-avatar-img(src='/images/avatar-fat.jpg', alt='user_avatar')
+                    .col-md-11.comment-text
+                      strong= comment.author
+                      = comment.text

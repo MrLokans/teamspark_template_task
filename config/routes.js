@@ -5,8 +5,12 @@ var main = require('../controllers/main');
 
 
 module.exports = function(app){
+    app.get('/', main.index);
     app.get('/login', users.login);
-    // app.get('/signup', users.signup);
+    app.get('/signup', users.signup);
+    app.get('/users', users.all);
+
+    app.get('/post/:id', posts.details);
     // app.get('/logout', users.logout);
     // app.post('/users', users.create);
 
