@@ -9,8 +9,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 
 module.exports = function(app){
-
-    app.set('views', path.join(__dirname, 'views'));
+    app.set('views', path.join(__dirname, '..', 'views'));
     app.set('view engine', 'jade');
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,5 +17,5 @@ module.exports = function(app){
     app.use(session({secret: 'SECRET'}));
     app.use(passport.initialize());
     app.use(passport.session());
-    app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname, '..', 'public')));
 };
