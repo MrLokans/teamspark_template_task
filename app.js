@@ -20,8 +20,8 @@ require('./models/Posts');
 require('./models/Comments');
 
 require('./config/passport')(passport);
-require('./config/express')(app);
-require('./config/routes')(app);
+require('./config/express')(app, passport);
+require('./config/routes')(app, passport);
 
 var User = mongoose.model('User');
 var Post = mongoose.model('Post');

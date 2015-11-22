@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 var passport = require('passport');
 
-module.exports = function(app){
+module.exports = function(app, passport){
     app.set('views', path.join(__dirname, '..', 'views'));
     app.set('view engine', 'jade');
     app.use(bodyParser.json());

@@ -4,7 +4,7 @@ var comments = require('../controllers/comments');
 var main = require('../controllers/main');
 
 
-module.exports = function(app){
+module.exports = function(app, passport){
     app.get('/', main.index);
     app.get('/login', users.login);
     app.get('/signup', users.signup);
