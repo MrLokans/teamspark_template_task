@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
 var Post = mongoose.model('Post');
-var Comment = mongoose.model('Comment');
 
 
 exports.details = function(req, res, next){

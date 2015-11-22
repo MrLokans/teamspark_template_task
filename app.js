@@ -17,7 +17,6 @@ mongoose.connect('mongodb://localhost/twitter_clone');
 
 require('./models/Users');
 require('./models/Posts');
-require('./models/Comments');
 
 require('./config/passport')(passport);
 require('./config/express')(app, passport);
