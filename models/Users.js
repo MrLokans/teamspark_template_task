@@ -48,7 +48,7 @@ UserSchema.path('email').validate(function(email){
     return email.length;
 }, 'Email cannot be blank');
 
-UserSchema.path('email,').validate(function(email, func){
+UserSchema.path('email').validate(function(email, func){
     var User = mongoose.model('User');
 
     if (this.isNew || this.isModified('email')){
