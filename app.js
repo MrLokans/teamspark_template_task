@@ -3,7 +3,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
-LocalStrategy = require('passport-local').Strategy;
 
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
@@ -20,6 +19,7 @@ require('./models/Users');
 require('./models/Posts');
 require('./models/Comments');
 
+require('./config/passport')(passport);
 require('./config/express')(app);
 require('./config/routes')(app);
 

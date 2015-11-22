@@ -12,8 +12,9 @@ var oAuthProviders = [
 
 var UserSchema = new Schema({
     // _id: Number,
+    name: {type: String, default: ''},
     username: {type: String, default: ''},
-    usermail: {type: String, default: ''},
+    email: {type: String, default: ''},
     hashed_password: {type: String, default: ''},
     salt: {type: String, default: ''},
     posts: [{type: Schema.Types.ObjectId, ref: 'Post'}],
