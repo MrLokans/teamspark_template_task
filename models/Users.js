@@ -12,7 +12,7 @@ var oAuthProviders = [
 
 var UserSchema = new Schema({
     // _id: Number,
-    name: {type: String, default: ''},
+    //name: {type: String, default: ''},
     username: {type: String, default: ''},
     email: {type: String, default: ''},
     hashed_password: {type: String, default: ''},
@@ -40,7 +40,7 @@ UserSchema
 
 // validations
 
-UserSchema.path('name').validate(function(name){
+UserSchema.path('username').validate(function(name){
     return name.length;
 }, 'Name cannot be blank');
 
@@ -49,34 +49,48 @@ UserSchema.path('email').validate(function(email){
 }, 'Email cannot be blank');
 
 UserSchema.path('email').validate(function(email, func){
+    // func called with 'true' or 'false' means the status of validation
+    console.log('validating user with email: ' + email);
     var User = mongoose.model('User');
 
     if (this.isNew || this.isModified('email')){
         User.find({email: email}).exec(function(err, users){
-            func(!err && user.length === 0);
+            if (err){
+                console.log(err);
+            }
+            console.log("users len: " + users.length);
+            console.log("err: " + !!err);
+            console.log("Status: " + (!err && users.length === 0))
+            func(!err && users.length === 0);
         });
-    } else func(false);
+    } else {
+        console.log(this.isNew);
+        console.log(this.isModified('email'));
+        func(true);
+    };
 }, 'Email already exists');
 
 
 UserSchema.path('username').validate(function(username){
+    console.log('validating user with username: ' + username);
     return username.length;
 }, 'Username cannot be blank');
 
 UserSchema.path('hashed_password').validate(function(hashed_password){
+    console.log('validating user\'s password');
     return hashed_password.length && this._password.length;
 }, 'Password cannot be blank');
 
 
-UserSchema.pre('save', function (next) {
-  if (!this.isNew) return next();
-
-  if (!validatePresenceOf(this.password) && !this.skipValidation()) {
-    next(new Error('Invalid password'));
-  } else {
-    next();
-  }
-});
+//UserSchema.pre('save', function (next) {
+//    if (!this.isNew) return next();
+//
+//    if (!validatePresenceOf(this.password)) {
+//        next(new Error('Invalid password'));
+//    } else {
+//        next();
+//    }
+//});
 
 
 UserSchema.methods = {

@@ -3,7 +3,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
-
+var config = require('./config/config');
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
 
@@ -12,8 +12,13 @@ var mongoose = require('mongoose');
 
 var app = express();
 
+module.exports = app;
 
-mongoose.connect('mongodb://localhost/twitter_clone');
+mongoose.connection.on('error', console.log);
+mongoose.connection.on('disconnected', connect);
+connect();
+
+//mongoose.connect('mongodb://localhost/twitter_clone');
 
 require('./models/Users');
 require('./models/Posts');
@@ -47,3 +52,10 @@ var fillWithComments = function(){
 
 console.log("Server is running on localhost:3000");
 app.listen(3000);
+
+// Connect to mongodb
+function connect () {
+  console.log('Connecting to monogo db: '+ config.db);
+  var options = { server: { socketOptions: { keepAlive: 1 } } };
+  mongoose.connect(config.db, options);
+}

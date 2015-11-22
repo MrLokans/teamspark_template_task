@@ -25,6 +25,29 @@ exports.all = function(req, res, next){
 );
 };
 
+exports.create = function (req, res) {
+    console.log(req.body);
+    const user = new User(req.body);
+
+    user.provider = 'local';
+    console.log("Trying to save the user");
+    user.save(function (err) {
+        if (err) {
+            console.log('error during user save. ' + err);
+            return res.redirect('users/signup');
+        }
+
+        // manually login the user once successfully signed up
+        req.logIn(user, function (err) {
+            if (err) {
+                console.log('Could not authorise user ' + user.username + ' after save.');
+                req.flash('info', 'Sorry! We are not able to log you in!');
+            }
+            return res.redirect('/');
+        });
+    });
+};
+
 exports.session = login;
 
 /**

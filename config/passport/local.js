@@ -15,12 +15,15 @@ module.exports = new LocalStrategy({
         };
         User.load(options, function(err, user){
             if (err){
+                console.log('auth error');
                 return done(err);
             }
             if (!user){
+                console.log('user '  + email + ' is not present in system');
                 return done(null, false, {message: 'Unknown user'});
             }
             if (!user.authenticate(password)){
+                console.log('user '  + email + ' supplid incorrect password');
                 return done(null, false, {message: "Invalid password"});
             }
             return done(null, user);

@@ -21,7 +21,7 @@ module.exports = function(app, passport){
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(cookieParser());
     app.use(session({secret: 'SECRET'}));
-    app.use(cookieSession({ secret: 'secret' }));
+    //app.use(cookieSession({ secret: 'secret' }));
     app.use(session({
         resave: true,
         saveUninitialized: true,
