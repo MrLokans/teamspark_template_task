@@ -38,6 +38,47 @@ UserSchema
         return this._password;
     });
 
+// validations
+
+UserSchema.path('name').validate(function(name){
+    return name.length;
+}, 'Name cannot be blank');
+
+UserSchema.path('email').validate(function(email){
+    return email.length;
+}, 'Email cannot be blank');
+
+UserSchema.path('email,').validate(function(email, func){
+    var User = mongoose.model('User');
+
+    if (this.isNew || this.isModified('email')){
+        User.find({email: email}).exec(function(err, users){
+            func(!err && user.length === 0);
+        });
+    } else func(false);
+}, 'Email already exists');
+
+
+UserSchema.path('username').validate(function(username){
+    return username.length;
+}, 'Username cannot be blank');
+
+UserSchema.path('hashed_password').validate(function(hashed_password){
+    return hashed_password.length && this._password.length;
+}, 'Password cannot be blank');
+
+
+UserSchema.pre('save', function (next) {
+  if (!this.isNew) return next();
+
+  if (!validatePresenceOf(this.password) && !this.skipValidation()) {
+    next(new Error('Invalid password'));
+  } else {
+    next();
+  }
+});
+
+
 UserSchema.methods = {
     authenticate: function(plainText){
         return this.encryptPassword(plainText) == this.hashed_password;
