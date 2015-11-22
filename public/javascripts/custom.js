@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // alert("Hello, world!");
+
     btn1 = $('#followed_1');
     btn2 = $('#followed_2');
 
@@ -62,9 +62,5 @@ function changeFollowStatus(buttonNum){
         $('#'+btn_id).text("Unfollow");
         localStorage.setItem(btn_id, "following");
     }
-
-
-
-
 }
-// function
+
