@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    btn1 = $('#followed_1');
-    btn2 = $('#followed_2');
+    var btn1 = $('#followed_1');
+    var btn2 = $('#followed_2');
 
     if(isFollowing(1)){
         btn1.text("Unfollow");
@@ -24,7 +24,7 @@ $(document).ready(function(){
     });
 
 
-    buyTicket = $('#buy-ticket-button');
+    var buyTicket = $('#buy-ticket-button');
     buyTicket.on("click", function(){
         $('#buy-ticket-button').replaceWith($('<input id="ticket-nuber-input" placeholder="Enter ticket num"></input>'));
     });
@@ -39,7 +39,35 @@ $(document).ready(function(){
             }
     });
 
+    var newPostField = $('#search-church');
+    var newPostBtn = $('#new-post');
+    newPostBtn.on("click", function(){
+        var postText = newPostField.val();
+        if (postText.length === 0){
+            console.log('Empty posts are not allowed');
+            return;
+        }
+        console.log("Sending new post");
+        newPost(postText);
+    });
+
+
 });
+
+function newPost(postText){
+    $.ajax({
+      type: "POST",
+      url: '/post/new',
+      data: {title: postText},
+      success: function(){
+        console.log("new post created");
+      },
+      error: function(err){
+          console.log("error occured " + err);
+      },
+      dataType: "json"
+    });
+}
 
 function isFollowing(follower_id){
     var followerStatusId = "followed_" + follower_id;

@@ -20,3 +20,11 @@ exports.details = function(req, res, next){
     };
     res.render('post', example_post_data);
 };
+
+exports.create = function(req, res, next){
+    console.log("Request with post creation");
+    var post = new Post(req.body);
+    post.user = req.user;
+    post.save();
+    res.json({"status": "created succsessfully"});
+};

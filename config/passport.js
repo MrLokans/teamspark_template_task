@@ -1,4 +1,4 @@
-'use esnext';
+'use strict';
 
 var mongoose = require('mongoose');
 var user = mongoose.model('User');
@@ -6,8 +6,12 @@ var user = mongoose.model('User');
 var local = require('./passport/local');
 
 module.exports = function(passport){
-    passport.serializeUser((user, cb) => cb(null, user.id));
-    passport.deserializeUser((id, cb) => User.load({ criteria: { _id: id } }, cb));
+    passport.serializeUser(function(user, cb){
+        return cb(null, user.id)
+    });
+    passport.deserializeUser(function(id, cb){
+        return User.load({ criteria: { _id: id } }, cb)
+    });
 
     passport.use(local);
 };

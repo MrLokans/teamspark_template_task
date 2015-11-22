@@ -24,7 +24,6 @@ require('./config/routes')(app, passport);
 
 var User = mongoose.model('User');
 var Post = mongoose.model('Post');
-var Comment = mongoose.model('Comment');
 
 
 var fillWithAuthors = function(){

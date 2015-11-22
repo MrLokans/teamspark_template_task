@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var PostSchema = new mongoose.Schema({
     author: {type: mongoose.Schema.Types.ObjectId,ref: 'User'},
-    title: String,
+    title: {type: String, default: ''},
     link: String,
     upvotes: {type: Number, default: 0},
     date: { type: Date, default: Date.now },
@@ -25,7 +25,8 @@ PostSchema.methods = {
 
     removeComment: function(commentId, cb){
         // think about removing the comment
-    }
+    },
+
 };
 
 PostSchema.statics = {

@@ -5,14 +5,19 @@ $(document).ready(function(){
 
     submit_btn.on('click', function(){
         console.log('Attempting to login');
+        console.log("email: " + user_field.val());
+        console.log("pass: " + pass_field.val());
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/login',
-            data: {username: user_field.val(), password: pass_field.val()},
+            url: '/users/session',
+            data: {email: user_field.val(), password: pass_field.val()},
             dataType: "json",
             success: function(data, textStatus){
                 console.log("Logged in");
             },
+            error: function(err){
+                console.log("login didn't succeed " + err);
+            }
         });
     });
 });

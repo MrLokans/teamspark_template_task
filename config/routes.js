@@ -13,6 +13,12 @@ module.exports = function(app, passport){
     app.get('/signup', users.signup);
     app.get('/users', users.all);
 
+    app.post('/users/session',
+        passport.authenticate('local', {
+            failureRedirect: '/login',
+            failureFlash: 'Invalid email or password.'
+        }), users.session);
+
 
     app.post('/post/new', auth.requiresLogin, posts.create);
     app.get('/post/:id', posts.details);
