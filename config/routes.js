@@ -3,6 +3,9 @@ var posts = require('../controllers/posts');
 var comments = require('../controllers/comments');
 var main = require('../controllers/main');
 
+var auth = require('./middlewares/authorization');
+
+var postAuth = [auth.requiresLogin, auth.post.hasAuthorization];
 
 module.exports = function(app, passport){
     app.get('/', main.index);
@@ -10,6 +13,8 @@ module.exports = function(app, passport){
     app.get('/signup', users.signup);
     app.get('/users', users.all);
 
+
+    app.post('/post/new', auth.requiresLogin, posts.create);
     app.get('/post/:id', posts.details);
     // app.get('/logout', users.logout);
     // app.post('/users', users.create);

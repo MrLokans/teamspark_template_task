@@ -18,10 +18,10 @@ module.exports = new LocalStrategy({
                 return done(err);
             }
             if (!user){
-                return done(null, false, {message: 'Unknownuser'});
+                return done(null, false, {message: 'Unknown user'});
             }
             if (!user.authenticate(password)){
-                return done(null, false, {message: "Invlaid password"});
+                return done(null, false, {message: "Invalid password"});
             }
             return done(null, user);
         });
