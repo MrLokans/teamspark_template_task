@@ -53,12 +53,22 @@ UserSchema.methods = {
             encryptedPass = crypto
                 .createHmac('sha512', this.salt)
                 .update(password)
-                .diget('hex');
+                .digest('hex');
         }catch (err){
             return '';
         }
     },
 
+};
+
+// find single user via criteria, extract selected field and call func
+UserSchema.statics = {
+    load: function(options, cb){
+        options.select = options.select || 'name username';
+        this.findOne(options.criteria)
+            .select(options.select)
+            .exec(cb);
+    }
 };
 
 mongoose.model('User', UserSchema);
