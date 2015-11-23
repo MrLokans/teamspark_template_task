@@ -32,7 +32,9 @@ UserSchema
     .set(function(password){
         this._password = password;
         this.salt = this.generateSalt();
+        console.log("New password salt: " + this.salt);
         this.hashed_password = this.encryptPassword(password);
+        console.log("New hashed_password: " + this.hashed_password);
     })
     .get(function(){
         return this._password;
@@ -58,16 +60,17 @@ UserSchema.path('email').validate(function(email, func){
             if (err){
                 console.log(err);
             }
-            console.log("users len: " + users.length);
-            console.log("err: " + !!err);
-            console.log("Status: " + (!err && users.length === 0))
-            func(!err && users.length === 0);
+
+            var save_status = (!err && users.length === 0);
+            if (save_status){
+                console.log('User\'s email validated');
+            }
+            func(save_status);
         });
     } else {
-        console.log(this.isNew);
-        console.log(this.isModified('email'));
+        console.log('User\'s email validated');
         func(true);
-    };
+    }
 }, 'Email already exists');
 
 
@@ -95,6 +98,10 @@ UserSchema.path('hashed_password').validate(function(hashed_password){
 
 UserSchema.methods = {
     authenticate: function(plainText){
+        console.log("Checking authentication: ");
+        console.log("Plaing password: " + plainText);
+        console.log("Now encrypted: " + this.encryptPassword(plainText));
+        console.log("Hashed password: " + this.hashed_password);
         return this.encryptPassword(plainText) == this.hashed_password;
     },
     generateSalt: function(){
@@ -106,10 +113,12 @@ UserSchema.methods = {
         }
         try{
             encryptedPass = crypto
-                .createHmac('sha512', this.salt)
+                .createHmac('sha1', this.salt)
                 .update(password)
                 .digest('hex');
+            return encryptedPass;
         }catch (err){
+            console.log("Error generating password");
             return '';
         }
     },

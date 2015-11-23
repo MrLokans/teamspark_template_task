@@ -18,7 +18,10 @@ $(document).ready(function(){
                 console.log("Logged in");
             },
             error: function(err){
-                console.log("login didn't succeed " + err);
+                console.log("Signup didn't succeed " + err);
+                console.log("Signup didn't succeed " + err.text);
+                // console.log("Signup didn't succeed " + err.);
+
             }
         });
     });

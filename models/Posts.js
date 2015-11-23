@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var PostSchema = new mongoose.Schema({
     author: {type: mongoose.Schema.Types.ObjectId,ref: 'User'},
     title: {type: String, default: ''},
+    body: {type: String, default: ''},
     link: String,
     upvotes: {type: Number, default: 0},
     date: { type: Date, default: Date.now },
@@ -41,7 +42,7 @@ PostSchema.statics = {
         var criteria = options.criteria || {};
 
         this.find(criteria)
-            .populate('user', 'name username')
+            .populate('user', 'username')
             .sort({'date': -1})
             .exec(cb);
     }

@@ -8,20 +8,33 @@ var auth = require('./middlewares/authorization');
 var postAuth = [auth.requiresLogin, auth.post.hasAuthorization];
 
 module.exports = function(app, passport){
-    app.get('/', main.index);
+    app.get('/', 
+        // passport.authenticate('local', {
+        //     failureRedirect: '/login',
+        //     failureFlash: 'Only authorized users are allowed.',
+        // }),
+        auth.requiresLogin,
+        main.index);
     app.get('/login', users.login);
     app.get('/signup', users.signup);
-    app.get('/users', users.all);
+    app.get('/logout', users.logout);
+    app.get('/users', 
+        auth.requiresLogin,
+        users.all);
+
     app.post('/users', users.create);
 
     app.post('/users/session',
-        passport.authenticate('local', {
-            failureRedirect: '/login',
-            failureFlash: 'Invalid email or password.'
-        }), users.session);
+         passport.authenticate('local', {
+              failureRedirect: '/login',
+              failureFlash: 'Invalid email or password.'
+            }),
+        users.session);
+
 
 
     app.post('/post/new', auth.requiresLogin, posts.create);
+    app.get('/post/my', auth.requiresLogin, posts.listmy);
     app.get('/post/:id', posts.details);
     // app.get('/logout', users.logout);
     // app.post('/users', users.create);

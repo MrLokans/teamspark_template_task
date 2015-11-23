@@ -58,12 +58,12 @@ function newPost(postText){
     $.ajax({
       type: "POST",
       url: '/post/new',
-      data: {title: postText},
+      data: {title: "Test", body: postText},
       success: function(){
         console.log("new post created");
       },
       error: function(err){
-          console.log("error occured " + err);
+          console.log("error occured " + err.text);
       },
       dataType: "json"
     });

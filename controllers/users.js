@@ -27,7 +27,7 @@ exports.all = function(req, res, next){
 
 exports.create = function (req, res) {
     console.log(req.body);
-    const user = new User(req.body);
+    var user = new User(req.body);
 
     user.provider = 'local';
     console.log("Trying to save the user");
@@ -43,6 +43,7 @@ exports.create = function (req, res) {
                 console.log('Could not authorise user ' + user.username + ' after save.');
                 req.flash('info', 'Sorry! We are not able to log you in!');
             }
+            console.log("Redirecting to /");
             return res.redirect('/');
         });
     });
@@ -57,10 +58,15 @@ exports.session = login;
 function login (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    console.log("Attempting logind, session :" + request.session);
+    console.log("Attempting logind, session :" + req.session);
     var redirectTo = req.session.returnTo
         ? req.session.returnTo
         : '/';
     delete req.session.returnTo;
     res.redirect(redirectTo);
 }
+
+exports.logout = function(req, res){
+    req.logout();
+    res.redirect('/login');
+};

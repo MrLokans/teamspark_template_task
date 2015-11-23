@@ -1,7 +1,9 @@
 exports.requiresLogin = function(req, res, next){
     if (req.isAuthenticated()){
+        console.log("User SUCCESSFULY authenticated.");
         return next();
     }
+    console.log("User is not authenticated.");
     if (req.method == 'GET'){
         req.session.returnTo = req.originalUrl;
     }
